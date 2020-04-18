@@ -1,0 +1,21 @@
+.Landing {
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CarouselCard {
+    display: flex;
+    flex-direction: column;
+    height: 82vh;
+    width: 100vw;
+}
+
+.SignInCard {
+    display: flex;
+    flex-direction: column;
+    height: 82vh;
+    background-color: white;
+}

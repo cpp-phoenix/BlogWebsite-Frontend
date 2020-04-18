@@ -1,0 +1,132 @@
+.signin {
+  height: 42vh;
+  width:35vw;
+}
+
+.upper-heading {
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8vh;
+  color: #696969;
+  display: flex;
+}
+
+.heading-text {
+  font-size: 2.5vw !important;
+  color: #545454 !important;
+  padding-right: 2vw;
+}
+
+.sub-heading-text1 {
+  color: #a0a39f !important;
+  padding-top: 6vh;
+  padding-left: 8vw;
+  position: absolute;
+  z-index: 1;
+}
+
+.sub-heading-text2 {
+  color: #a0a39f !important;
+  padding-right: 1vw;
+}
+
+#form {
+  height: 28vh;
+  width: 100%;
+  margin-bottom: 2.8vh;
+}
+
+.bottom-text {
+  height: 10vh;
+  width: 100%;
+  padding-top: 7%;
+  color: #9d9e9c !important;
+  margin-left: 1vw;
+  font-size: 1vw !important;
+}
+
+.middle-text {
+  padding-top: 5vh;
+  height: 51vh;
+}
+
+.google-signIn {
+  display: flex;
+  padding-top: 3vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.google-img {
+  display: flex;
+  margin-right: 0.5vh;
+  flex-direction: column;
+  height: 5vh;
+  width: 3vw;
+}
+
+.sign-in {
+  display: flex;
+  color: #a6a7a5 !important;
+  flex-direction: column;
+  font-size: 0.9vw !important;
+}
+
+.separater {
+  color: #d8d9d7 !important;
+  font-weight: bold !important;
+}
+
+
+#outlined-size-normal {
+  width: 20vw !important;
+  borderColor:  #a0a39f !important;
+
+}
+
+.userEmail {
+  padding-top: 3vh;
+  height: 10vh;
+}
+
+.forgot-password {
+  text-align: right;
+  padding-top: 1.8vh;
+  padding-right: 7.3vw;
+}
+
+.forgot-password-typo {
+  
+  font-weight: bold !important;
+}
+
+.forgot-password-typo1 {
+  font-size: 0.8vw !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  color: #739265 !important;
+}
+
+.button {
+  height: 8vh;
+  padding-top: 1.5vh;
+}
+
+.create-account {
+  color: #739265 !important;
+  text-decoration: underline !important;
+  font-weight: bold;
+  padding-right: 0.7vw;
+}
+
+.button-internal {
+  background-color: #696969 !important;
+  color: white !important;
+  border-radius: 10vw !important;
+  width: 11vw;
+  height: 5vh;
+  text-transform: none !important;
+  font-weight: normal !important;
+  font-size: 2vh !important;
+}

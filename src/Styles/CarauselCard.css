@@ -1,0 +1,9 @@
+.carausel {
+    width: 100%;
+    height: 140vh;
+}
+.d-block {
+    width: 100%;
+    height: 82vh;
+    object-fit: cover; 
+}
