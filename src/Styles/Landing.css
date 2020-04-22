@@ -1,21 +1,55 @@
 .Landing {
-    height: 100vh;
+    height: 82vh;
     width: 80vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: auto; 
+    display: inline-block;
 }
 
 .CarouselCard {
-    display: flex;
     flex-direction: column;
+    display: flex;
     height: 82vh;
-    width: 100vw;
+    width: 80vw;
+}
+
+.CarouselCard[active-view="SignIn"]{
+    width: 50vw;
+}
+.CarouselCard[active-view="SignUp"] {
+    width: 50vw;
 }
 
 .SignInCard {
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    margin-top: 10vh;
+    margin-right: 10vw;
+    right: 0;
+    top: 0;
     height: 82vh;
+    width:30vw;
     background-color: white;
+}
+
+.SignUpCard {
+    position: absolute;
+    margin-top: 10vh;
+    margin-right: 10vw;
+    right: 0;
+    top: 0;
+    height: 82vh;
+    width:30vw;
+    background-color: #3e3c3d;
+}
+
+.ContinueToLogin {
+    position: absolute;
+    text-align: center;
+    padding-right: 20vw;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+}
+
+.ContinueToLogin[active-view="SignIn"] {
+    display: none;
 }

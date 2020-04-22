@@ -1,6 +1,5 @@
 .signin {
   height: 42vh;
-  width:35vw;
 }
 
 .upper-heading {
@@ -42,7 +41,7 @@
   width: 100%;
   padding-top: 7%;
   color: #9d9e9c !important;
-  margin-left: 1vw;
+  margin-left: 0.8vw;
   font-size: 1vw !important;
 }
 
@@ -81,7 +80,7 @@
 
 #outlined-size-normal {
   width: 20vw !important;
-  borderColor:  #a0a39f !important;
+  color:  #a0a39f !important;
 
 }
 
@@ -93,11 +92,10 @@
 .forgot-password {
   text-align: right;
   padding-top: 1.8vh;
-  padding-right: 7.3vw;
+  padding-right: 5.6vw;
 }
 
 .forgot-password-typo {
-  
   font-weight: bold !important;
 }
 

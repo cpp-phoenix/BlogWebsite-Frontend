@@ -1,0 +1,67 @@
+.upper-heading-signup{
+    width: 100%;
+    height: 25vh;
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.heading-text-signup{
+    font-size: 2.5vw !important;
+    color: white !important;
+    padding-right: 2vw;
+}
+
+.sub-heading-text1-signup {
+    color: white !important;
+    padding-left: 14vw;
+    padding-top: 15vh;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.sub-heading-text2-singup {
+    color: #ee8fad !important;
+}
+
+.middle-text-signup {
+    text-align: center;
+}
+
+#form-signup {
+    height: 35vh;
+}
+
+.email-signup {
+    height: 30vh !important;
+}
+
+.userPasswordSignUp {
+    padding-top: 3vh;
+}
+
+.button-singUp {
+    padding-top: 5vh;
+}
+
+.button-internal-singUp {
+    background-color: #ee8fad !important;
+    color: white !important;
+    border-radius: 10vw !important;
+    width: 11vw;
+    height: 5vh;
+    text-transform: none !important;
+    font-weight: normal !important;
+    font-size: 2vh !important;
+}
+
+.bottom-text-signUp {
+    height: 18vh;
+    padding-top: 12vh;
+}
+
+.sign-up {
+    padding-top: 2000vh !important;
+    color: white !important;
+    font-weight: bold !important;
+}
