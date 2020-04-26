@@ -18,6 +18,9 @@
 .CarouselCard[active-view="SignUp"] {
     width: 50vw;
 }
+.CarouselCard[active-view="ForgotPassword"] {
+    width: 50vw;
+}
 
 .SignInCard {
     position: absolute;
@@ -52,4 +55,15 @@
 
 .ContinueToLogin[active-view="SignIn"] {
     display: none;
+}
+
+.ForgotPasswordPage {
+    position: absolute;
+    margin-top: 10vh;
+    margin-right: 10vw;
+    right: 0;
+    top: 0;
+    height: 82vh;
+    width:30vw;
+    background-color: white;
 }

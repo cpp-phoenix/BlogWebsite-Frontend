@@ -13,7 +13,7 @@ class SiginCard extends Component {
       </div>
       <div className = "middle-text">
       <Typography variant="h5" className="sub-heading-text2" gutterBottom>Welcome to Blogsters</Typography>
-      <Signin />
+      <Signin updateViewState={this.props.updateViewState}/>
       <Typography variant="caption" display="block" className = "separater" gutterBottom>--------------------- or ----------------------</Typography>
         <div className="google-signIn">
           <img src="https://img.icons8.com/clouds/100/000000/google-logo.png" alt="First slide" className="google-img"/>

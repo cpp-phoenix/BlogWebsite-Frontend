@@ -14,7 +14,7 @@
 .sub-heading-text1-signup {
     color: white !important;
     padding-left: 14vw;
-    padding-top: 15vh;
+    padding-top: 16vh;
     top: 0;
     position: absolute;
     z-index: 1;
@@ -58,10 +58,10 @@
 .bottom-text-signUp {
     height: 18vh;
     padding-top: 12vh;
+    padding-left: 0.8vw;
 }
 
 .sign-up {
-    padding-top: 2000vh !important;
     color: white !important;
     font-weight: bold !important;
 }
