@@ -69,11 +69,11 @@ class Signin extends React.Component {
     }
     if(this.state.username !== "" && this.state.password !== "") {
       const data = await this.authenticateUser();
-      if(data.Message === "User Authentication Successfully!!") {
+      if(data.Status === 3000) {
         alert("User Authorised Sucessfully!");
       }
       else {
-        alert(data.Message);
+        alert(data.Status);
       }
     }
   }

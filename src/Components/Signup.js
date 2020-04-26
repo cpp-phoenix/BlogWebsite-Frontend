@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Form } from 'react-bootstrap';
 import { Button, TextField } from '@material-ui/core';
+import { RestConstants } from '../Constants/application.constants';
 
 class Signup extends Component {
 
@@ -19,7 +20,6 @@ class Signup extends Component {
   handleChange = (event) => {
     if(event.target.name === "name_helper") {
       if(event.target.value === "") {
-        console.log("ef");
         this.setState({
           username: "UserName Field Is Mandatory",
           usernameValue: ""
@@ -32,39 +32,70 @@ class Signup extends Component {
         });
       }
     }
-    if(event.target.name === "email_helper" && event.target.value ==="") {
-      this.setState({email: "Email is Mandatory", emailValue: ""});
+    if(event.target.name === "email_helper") {
+      if(event.target.value ==="") {
+        this.setState({email: "Email is Mandatory", emailValue: ""});
+      }
+      else {
+        this.setState({
+          email: "",
+          emailValue: event.target.value
+        });
+      }
     }
-    else {
-      this.setState({
-        email: "",
-        emailValue: event.target.value
-      });
+    if(event.target.name === "password_helper") {
+      if(event.target.value ==="") {
+        this.setState({password: "Password is Mandatory", passwordValue: ""});
+      }
+      else {
+        this.setState({
+          password: "",
+          passwordValue: event.target.value
+        });
+      }
     }
-    if(event.target.name === "password_helper" && event.target.value ==="") {
-      this.setState({password: "Password is Mandatory", passwordValue: ""});
-    }
-    else {
-      this.setState({
-        password: "",
-        passwordValue: event.target.value
-      });
-    }
-    if(this.state.usernameValue=== "" || this.state.emailValue === "" || this.state.passwordValue === "" ) {
+    if(this.state.usernameValue=== "" || this.state.emailValue === "" || this.state.passwordValue === "") {
       return false;
     }
     return true;
   }
 
-  submitData = (event) => {
+  saveUser = async () => {
+    const data = {
+      userName: "",
+      email: "",
+      password: ""
+    }
+    data.userName=this.state.usernameValue;
+    data.email = this.state.emailValue;
+    data.password = this.state.passwordValue;
+    let response = await fetch(RestConstants.SAVE_USER, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accpet': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).catch(error => {});
+    return await response.json();
+  }
 
+  submitData = async (event) => {
     if(this.handleChange(event) === true) {
-      alert("Go on with the submissiion");
+      const data = await this.saveUser();
+      if (data.Status === 3002) {
+        alert("Username not available");
+      }
+      else if(data.Status === 3004) {
+        alert("Email already present kindly sign in");
+      }
+      else {
+        alert("Yo Yo Yo. You did the trick");
+      }
     }
     else {
-      alert("Mandatory Fields are Empty!");
+      alert("Mandatory Fields are Empty or Invalid Data!");
     }
-
   }
 
   render() {

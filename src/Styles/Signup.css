@@ -7,12 +7,11 @@
 
 .heading-text-signup{
     font-size: 2.5vw !important;
-    color: white !important;
     padding-right: 2vw;
 }
 
 .sub-heading-text1-signup {
-    color: white !important;
+    color: #a0a39f !important;
     padding-left: 14vw;
     padding-top: 16vh;
     top: 0;
@@ -62,6 +61,7 @@
 }
 
 .sign-up {
-    color: white !important;
+    font-style: normal !important;
     font-weight: bold !important;
+    color: #a0a39f !important;
 }
