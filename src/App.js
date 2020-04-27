@@ -1,10 +1,11 @@
 import React from 'react';
-import Landing from './Landing';
-import './App.css';
+import Landing from './Components/Landing';
+import './App.css'
 
 function App() {
   return (
-    <div className="">
+    <div className = "main">
+      <div className = "background-image" style={{backgroundImage: `url(table.jpg)`}}></div>
       <Landing />
     </div>
   );

@@ -1,3 +1,20 @@
-.landing {
-  background-color: #f7f7f7;
+.main {
+  /* background-color: #686e69; */
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  padding-top: 10vh;
+  padding-left: 10vw;
+}
+
+.background-image {
+  position: absolute;
+  z-index: -1;
+  width: 120%;
+  height: 120%;
+  right: 2%;
+  bottom: 2%;
+  filter: blur(50px);
+  overflow: hidden;
 }

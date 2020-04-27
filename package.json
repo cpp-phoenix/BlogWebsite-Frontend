@@ -1,19 +1,28 @@
 {
+  "homepage": "http://NamanSehgal.github.io/blog-frontend",
   "name": "blog-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.9",
+    "@material-ui/icons": "^4.9.1",
+    "bootstrap": "^4.4.1",
+    "evergreen-ui": "^4.25.0",
     "react": "^16.10.1",
+    "react-bootstrap": "^1.0.0",
     "react-dom": "^16.10.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "https://blog-backend-v1.herokuapp.com",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -28,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
