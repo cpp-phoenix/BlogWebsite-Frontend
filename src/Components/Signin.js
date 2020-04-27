@@ -47,7 +47,7 @@ class Signin extends React.Component {
     else {
       data.email = this.state.username;
     }
-    data.password = this.state.password;
+    data.password = btoa(this.state.password);
     let response = await fetch(RestConstants.AUTHENTICATE_USER, {
       method: 'POST',
       headers: { 
@@ -85,7 +85,7 @@ class Signin extends React.Component {
           <TextField name="username" label="Users name or Email" id="outlined-size-normal" color="inherit" helperText={this.state.usernameHelperText} onChange={this.onChangeTextField}/>
         </div>
         <div className = "passwordDiv">
-          <TextField name="password" label="Password" id="outlined-size-normal" helperText={this.state.passwordHelperText} onChange={this.onChangeTextField} />
+          <TextField name="password" type="password" label="Password" id="outlined-size-normal" helperText={this.state.passwordHelperText} onChange={this.onChangeTextField} />
         </div>  
         <div className = "forgot-password">  
           <Typography className = "forgot-password-typo" gutterBottom>

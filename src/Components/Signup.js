@@ -68,7 +68,7 @@ class Signup extends Component {
     }
     data.userName=this.state.usernameValue;
     data.email = this.state.emailValue;
-    data.password = this.state.passwordValue;
+    data.password = btoa(this.state.passwordValue);
     let response = await fetch(RestConstants.SAVE_USER, {
       method: 'POST',
       headers: {
@@ -104,12 +104,12 @@ class Signup extends Component {
         <div className = "userEmail">
           <TextField helperText={this.state.username} name="name_helper" label="UserName" id="outlined-size-normal" color="inherit" onChange={this.handleChange}/>
         </div>
-        <div>
+        <div className = "userEmailSignUp">
           <TextField helperText={this.state.email} name="email_helper" label="Email" id="outlined-size-normal" onChange={this.handleChange}/>
         </div>  
         <div className = "userPasswordSignUp"> 
           <div>
-              <TextField helperText={this.state.password} name="password_helper" label="Password" id="outlined-size-normal" onChange={this.handleChange}/>
+              <TextField helperText={this.state.password} type="password" name="password_helper" label="Password" id="outlined-size-normal" onChange={this.handleChange}/>
           </div> 
         </div>
         <div className="button-singUp">

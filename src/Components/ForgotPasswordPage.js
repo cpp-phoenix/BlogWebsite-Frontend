@@ -7,6 +7,8 @@ class ForgotPasswordPage extends Component {
     constructor() {
       super();
       this.state = {
+        username: "",
+        usernameHelperText: "", 
         showOtp: false,
         buttonText: "Send Email"
       }
@@ -15,18 +17,33 @@ class ForgotPasswordPage extends Component {
     sendEmail = (event) => {
       this.setState({
         showOtp: true,
-        buttonText: "Resend Email"
+        buttonText: "Submit"
       });
     }
+    
+    handleChange = (event) => {
+      if(event.target.name === "username") {
+        if(event.target.value === "") {
+          this.setState({usernameHelperText: "Username is mandatory"});
+        }
+        else {
+          this.setState({usernameHelperText: ""});
+        }
+        this.setState({username: event.target.value});
+      }
+    }
+
     render() {
       return(
         <div>
           <div className="back_button_div" onClick={() => {this.props.updateViewState("SignIn")}}> <Button className="back_button" startIcon={<ArrowBackIcon/>}>Back</Button> </div>
+          <div className="upper-heading">
+            <Typography className="heading-text" >Propagate</Typography> <br/>
+            <Typography className="sub-heading-text1" >Uniting Thoughts...</Typography>
+          </div>
           <div className="forgot_password_form">
-            <div className="textField"><TextField label="UserName" className="textField" id="outlined-size-normal" color="primary" /></div>
-            <div className="textField"><TextField label="Password" id="outlined-size-normal" color="primary" /></div>
-            <div className="textField"><TextField label="Verify Password" id="outlined-size-normal" color="primary" /> <br/></div>
-            {this.state.showOtp && <div className="textField"> <TextField label="Enter Pin Sent To You By Email" id="outlined-size-normal" color="primary" /> </div>}  <br/>
+            <div className="textField"><TextField name="username" helperText={this.state.usernameHelperText} label=" Enter UserName" className="textField" id="outlined-size-normal" color="primary" onChange={this.handleChange}/></div>
+            {this.state.showOtp && <div className="textField"> <TextField label="Enter Otp" id="outlined-size-normal" color="primary" /> </div>}  <br/>
             <div className="email_button_div"><Button className="email_button" onClick={this.sendEmail}>{this.state.buttonText}</Button></div>
           </div>
           <div className="bottom-text_inherit">

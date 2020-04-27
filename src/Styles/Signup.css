@@ -35,12 +35,18 @@
     height: 30vh !important;
 }
 
+.userEmailSignUp {
+    height: 8vh;
+    padding-top: 1vh;
+}
+
 .userPasswordSignUp {
-    padding-top: 3vh;
+    height: 8vh;
+    padding-top: 1vh;
 }
 
 .button-singUp {
-    padding-top: 5vh;
+    margin-top: 3vh;
 }
 
 .button-internal-singUp {
