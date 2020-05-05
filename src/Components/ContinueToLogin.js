@@ -7,7 +7,7 @@ export default function ContinueToLogin(props) {
   return (
     <div className="button">
       <Button onClick={() => { props.updateViewState("SignIn") }} 
-        className="button-internal" color="inherit" size="normal">
+        className="button-internal" color="inherit" >
         Continue
         </Button>
     </div>

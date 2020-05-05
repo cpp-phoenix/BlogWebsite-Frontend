@@ -10,7 +10,7 @@ class Landing extends Component {
   constructor() {
     super();
     this.state = {
-      whichPage: "ForgotPassword"
+      whichPage: "SignIn"
     };
   }
 

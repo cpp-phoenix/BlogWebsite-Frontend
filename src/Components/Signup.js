@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Form } from 'react-bootstrap';
+import { Redirect } from 'react-router';
 import { Button, TextField } from '@material-ui/core';
 import { RestConstants } from '../Constants/application.constants';
 
@@ -8,16 +9,23 @@ class Signup extends Component {
   constructor(){
     super();
     this.state = {
+      nameValue: "",
       username: "",
       usernameValue: "",
       email: "",
       emailValue: "",
       password: "",
-      passwordValue: ""
+      passwordValue: "",
+      redirect: false,
+      avatar: 1,
     }
   }
 
   handleChange = (event) => {
+    if(event.target.name === "Users_name_helper") {
+      this.setState({nameValue: event.target.value})
+    } 
+
     if(event.target.name === "name_helper") {
       if(event.target.value === "") {
         this.setState({
@@ -50,25 +58,29 @@ class Signup extends Component {
       else {
         this.setState({
           password: "",
-          passwordValue: event.target.value
+          passwordValue: btoa(event.target.value)
         });
       }
     }
-    if(this.state.usernameValue=== "" || this.state.emailValue === "" || this.state.passwordValue === "") {
+    if(this.state.usernameValue=== "" || this.state.emailValue === "" || this.state.passwordValue === "" || this.state.nameValue === "") {
       return false;
     }
     return true;
   }
 
   saveUser = async () => {
+    let avatar = (Math.floor(Math.random() * 7) + 1);
+    this.setState({avatar: avatar})
     const data = {
-      userName: "",
-      email: "",
-      password: ""
+      UserName: "",
+      Email: "",
+      Password: "",
+      Name: this.state.nameValue,
+      Avatar: avatar
     }
-    data.userName=this.state.usernameValue;
-    data.email = this.state.emailValue;
-    data.password = btoa(this.state.passwordValue);
+    data.UserName=this.state.usernameValue;
+    data.Email = this.state.emailValue;
+    data.Password = this.state.passwordValue;
     let response = await fetch(RestConstants.SAVE_USER, {
       method: 'POST',
       headers: {
@@ -90,7 +102,11 @@ class Signup extends Component {
         alert("Email already present kindly sign in");
       }
       else {
-        alert("Yo Yo Yo. You did the trick");
+        localStorage.setItem('username', this.state.usernameValue);
+        localStorage.setItem('password', this.state.password);
+        localStorage.setItem('name', this.state.nameValue);
+        localStorage.setItem('avatar', this.state.avatar)
+        this.setState({redirect: true});
       }
     }
     else {
@@ -99,10 +115,22 @@ class Signup extends Component {
   }
 
   render() {
+    if(this.state.redirect) {
+      return <Redirect action="REPLACE" to={{
+        pathname: '/mainPage',
+        state: { 
+          auth: true,
+          activeTab: "Home"
+         }
+    }} />;
+    }
     return(
       <Form id="form-signup">
+        <div className = "userName">
+          <TextField label="Name" placeholder="Name" name="Users_name_helper" id="outlined-size-normal" color="primary" onChange={this.handleChange}/>
+        </div>
         <div className = "userEmail">
-          <TextField helperText={this.state.username} name="name_helper" label="UserName" id="outlined-size-normal" color="inherit" onChange={this.handleChange}/>
+          <TextField helperText={this.state.username} name="name_helper" label="UserName" id="outlined-size-normal" color="primary" onChange={this.handleChange}/>
         </div>
         <div className = "userEmailSignUp">
           <TextField helperText={this.state.email} name="email_helper" label="Email" id="outlined-size-normal" onChange={this.handleChange}/>
@@ -113,7 +141,7 @@ class Signup extends Component {
           </div> 
         </div>
         <div className="button-singUp">
-          <Button onClick={this.submitData} className = "button-internal-singUp" color="inherit" size="normal">
+          <Button onClick={this.submitData} className = "button-internal-singUp" color="primary">
             Sign up
           </Button>
         </div>

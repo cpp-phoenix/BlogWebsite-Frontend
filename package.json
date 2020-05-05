@@ -1,5 +1,5 @@
 {
-  "homepage": "http://NamanSehgal.github.io/blog-frontend",
+  "homepage": "https://cpp-phoenix.github.io/BlogWebsite-Frontend",
   "name": "blog-frontend",
   "version": "0.1.0",
   "private": true,
@@ -11,8 +11,9 @@
     "react": "^16.10.1",
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.10.1",
+    "react-loading": "^2.0.3",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.1.2"
+    "react-scripts": "^3.4.1"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -22,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://blog-backend-v1.herokuapp.com",
+  "proxy": "http://blog-backend-v1.herokuapp.com",
   "eslintConfig": {
     "extends": "react-app"
   },

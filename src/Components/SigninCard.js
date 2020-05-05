@@ -17,7 +17,7 @@ class SiginCard extends Component {
       <Typography variant="caption" display="block" className = "separater" gutterBottom>--------------------- or ----------------------</Typography>
         <div className="google-signIn">
           <img src="https://img.icons8.com/clouds/100/000000/google-logo.png" alt="First slide" className="google-img"/>
-          <Typography variant="caption" display="inherit" gutterBottom className = "sign-in">
+          <Typography variant="caption" gutterBottom className = "sign-in">
             Sign in with Google
           </Typography>
         </div>

@@ -1,0 +1,50 @@
+.navbarMain {
+    height: 100%;
+    margin-top: 0.5vh;
+    width: 100%;
+    text-align: center;
+}
+
+/* .navHeading {
+    color:white
+} */
+
+.navbarList {
+    height: 70vh;
+    margin-left: 1.8vw;
+}
+
+.listItems {
+    margin-top: 3vh !important;
+}
+
+.navPostButton {
+    margin-top: 6vh;
+    margin-left: 1vw;
+    margin-right: 2vw;
+    background-color: yellowgreen ;
+    border-radius: 10vw !important;
+}
+
+.navInternalButton {
+    width: 12vw;
+    height: 7vh;
+    color: white !important;
+    font-size: 19px !important;
+}
+
+.createPost {
+    /* width: 30.5vw;
+    height: 100vh; */
+    position: fixed;
+    /* right: 0; */
+    padding-right: 2vw;
+    margin-left: 20vw;
+    margin-top: 10vh;
+    /* background-color: #15202b; */
+    background-color: white;
+    border-radius: 1vw !important;
+    z-index: 999;
+    top:0;
+    border: 2px solid #E8E8E8E8;
+}
