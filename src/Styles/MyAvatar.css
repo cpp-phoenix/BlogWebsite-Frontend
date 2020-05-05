@@ -1,0 +1,57 @@
+.AvatarSelector {
+    width: 30.5vw;
+    position: fixed;
+    background-color: white;
+    animation: FadeIn 0.5s;
+    border-left: 1px solid #E8E8E8;
+    z-index: 2;
+    top:0;
+    margin-left: 50.8vw;
+}
+
+@keyframes FadeIn {
+    0% {
+      margin-left: 100vw;
+      /* opacity: 0; */
+    }
+    100% {
+      margin-left: 50.8vw;
+    }
+  }
+
+.MyAvatarHeading {
+    font-weight: bold !important;
+    font-size: 2.8vh !important;
+    margin-top: 1.8vh !important;
+    font-size: 3.4vh !important;
+    margin-bottom: 1vh !important;
+    border-bottom: 2px solid #E8E8E8
+}
+
+.AvatarPics {
+    padding-top: 5vh !important;
+}
+
+.first3Avatars {
+    display: flex;
+    margin-bottom: 5vh;
+}
+
+.second3Avatars {
+    display: flex;
+    margin-bottom: 5vh;
+}
+
+.last2Avatars {
+    display: flex;
+}
+
+.SaveAvatar {
+    margin-top: 20vh !important;
+    background-color: yellowgreen !important;
+    color: white !important;
+    font-size: 2vh !important;
+    border-radius: 10vh !important;
+    height: 8vh !important;
+    width: 12vw !important;
+}

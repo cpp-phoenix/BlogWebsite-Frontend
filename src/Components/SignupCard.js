@@ -15,7 +15,7 @@ class SignupCard extends Component {
                 <Typography variant="h5" className="sub-heading-text2-singup" gutterBottom>Here To Get Welcomed !</Typography>
                 <Signup />
                 <div className="bottom-text-signUp">
-                    <Link href="#" variant="caption" display="inherit" className = "sign-up" onClick={() => {this.props.updateViewState("SignIn")}} >
+                    <Link href="#" variant="caption" className = "sign-up" onClick={() => {this.props.updateViewState("SignIn")}} >
                     Already Have An Account? Sign-In
                     </Link>
                 </div>

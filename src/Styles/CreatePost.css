@@ -1,0 +1,54 @@
+.postDataBox {
+    width:35vw;
+    margin-top: 1vh !important;
+    margin-left: 4vw !important;
+}
+
+.postTitle {
+ display: flex;
+ border-bottom: 1px #3d5466 solid;
+}
+
+.postUserName {
+    width: 20%;
+}
+
+.cancelButton {
+    margin-top: 2vh;
+    margin-left: 1.35vw;
+}
+
+.postTitleBox {
+    width: 87.4% !important;
+    margin-top: 1vh !important;
+    margin-left: 1vw !important;
+    margin-bottom: 0.5vw !important;
+}
+
+.userAvatar {
+    height: 6vh;
+    margin-top: 1vh;
+    margin-left: 1vh;
+    margin-right: 0.7vw;
+    width: 6vh;
+    border-radius: 500vw;
+    background-color: red;
+    position: absolute;
+    background-color: white;
+}
+
+.postBottom {
+    display: flex;
+    height: 7.1vh;
+}
+
+
+.postButton {
+    height: 5vh;
+    margin-top: 1vh !important;
+    margin-left: 33vw !important;
+    border-radius: 3vh !important;
+    width: 6vw;
+    color: white !important;
+    background-color: yellowgreen  !important;
+}

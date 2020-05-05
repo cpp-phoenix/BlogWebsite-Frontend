@@ -1,0 +1,14 @@
+.emptySavedPosts {
+    margin-top: 4vh;
+    text-align: center;
+}
+
+.EmptySavedHeading {
+    font-weight: bold !important;
+    font-size: 2.8vh !important;
+}
+
+.EmptySavedSubHeading {
+    margin-top: 2vh !important;
+    font-size: 2vh !important;
+}
